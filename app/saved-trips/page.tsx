@@ -1,0 +1,1 @@
+export default function SavedTrips(){return <div className="container-x py-16"><div className="card p-10 text-center"><p className="badge">Saved Trips</p><h1 className="mt-4 text-3xl font-black">Keep your shortlist close.</h1><p className="mt-3 max-w-2xl text-[#68756e]">Save trips from any trip detail page. Your saved collection is tied to your account.</p></div></div>}

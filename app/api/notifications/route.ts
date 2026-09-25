@@ -1,0 +1,2 @@
+import { prisma } from "@/lib/db"; import { getCurrentUser } from "@/lib/auth"; import { fail, ok } from "@/lib/api";
+export async function GET() { const user = await getCurrentUser(); if (!user) return fail("UNAUTHORIZED", "Please sign in", 401); const notifications = await prisma.notification.findMany({ where: { userId: user.id }, orderBy: { createdAt: "desc" }, take: 30 }); return ok(notifications); }
